@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://fiddle.jshell.net/gilbitron/Lt2wH/show/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+
+  
+  
+
+  
+  
+  
+
+  
+
+  <script type="text/javascript" src="./jquery-1.11.0.js"></script>
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" type="text/css" href="./result-light.css">
+  
+
+  
+
+  <style type="text/css">
+    #back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 9999;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 30px;
+    background: #f5f5f5;
+    color: #444;
+    cursor: pointer;
+    border: 0;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+}
+#back-to-top:hover {
+    background: #e9ebec;
+}
+#back-to-top.show {
+    opacity: 1;
+}
+#content {
+    height: 2000px;
+}
+  </style>
+
+  <title>Quick jQuery "Back to Top" by gilbitron</title>
+
+  
+    
+
+
+
+
+<script type="text/javascript">//<![CDATA[
+$(window).load(function(){
+if ($('#back-to-top').length) {
+    var scrollTrigger = 100, // px
+        backToTop = function () {
+            var scrollTop = $(window).scrollTop();
+            if (scrollTop > scrollTrigger) {
+                $('#back-to-top').addClass('show');
+            } else {
+                $('#back-to-top').removeClass('show');
+            }
+        };
+    backToTop();
+    $(window).on('scroll', function () {
+        backToTop();
+    });
+    $('#back-to-top').on('click', function (e) {
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop: 0
+        }, 700);
+    });
+}
+});//]]> 
+
+</script>
+
+  
+</head>
+
+<body>
+  <div id="content">Scroll ↓</div>
+<a href="http://fiddle.jshell.net/gilbitron/Lt2wH/show/#" id="back-to-top" title="Back to top" class="">↑</a>
+  
+
+
+
+
+</body></html>

@@ -1,0 +1,3 @@
+style.css project ni style.css ma copy paste karvi.
+style.css header ma call karava ni.
+swipebox.css </body> body tag puro thay ani uper mukela code ma call karav vi.
